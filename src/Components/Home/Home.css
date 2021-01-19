@@ -1,0 +1,23 @@
+.Header{
+    background-image: url(../../Resorces/_images/Headerimage/Godfatherheader.jpg);
+    background-position: top center center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+.body{
+    height: 100vh;
+    background-color: #3a3839;
+}
+.logo{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.61));
+}
+.blog{
+    background-color: rgb(4, 3, 22);
+    padding: 5%;
+}
+.scrollBar{
+    padding:20px;
+    background:#eee;
+    font-size:12px
+}

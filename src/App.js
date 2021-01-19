@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './Components/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  } from "react-router-dom";
+import { createContext, useState } from 'react';
+export const userContext = createContext();
 function App() {
+ 
+  const [details, setDetails] = useState({
+    id:"1",
+    val_brightness:'30'
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <userContext.Provider value = {[details, setDetails]}>
+      <Router className="">
+       <Switch>
+         <Route exact path="/">
+            <Home/>
+         </Route>
+         <Route  path="/bg/:Id">
+            <Home/>
+         </Route>
+       </Switch>
+    </Router>
+   </userContext.Provider>
   );
 }
 
